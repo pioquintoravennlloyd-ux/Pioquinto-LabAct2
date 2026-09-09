@@ -17,17 +17,12 @@ function displayGreeting() {
         resultMessage.textContent =
             "Please enter your name.";
 
-        console.log("Greeting failed: no name entered.");
-
     } else {
 
-        heading.textContent =
-            "Hello, " + userName;
+        heading.textContent = "Hello, " + userName;
 
         resultMessage.textContent =
             "The greeting was displayed successfully.";
-
-        console.log("Greeting displayed for:", userName);
     }
 }
 
@@ -36,8 +31,6 @@ function showTypedText() {
 
     typingMessage.textContent =
         "You are typing: " + nameInput.value;
-
-    console.log("User is typing:", nameInput.value);
 }
 
 
@@ -51,44 +44,26 @@ function changeBackground() {
 
 function resetPage() {
 
-    heading.textContent =
-        "Event-Driven Webpage";
+    heading.textContent = "Event-Driven Webpage";
 
     nameInput.value = "";
 
-    typingMessage.textContent =
-        "You are typing:";
+    typingMessage.textContent = "You are typing:";
 
     resultMessage.textContent =
         "Enter your name and select an action.";
 
-    document.body.style.backgroundColor =
-        "#f3f4f6";
-
-    console.log("Page reset successfully.");
+    document.body.style.backgroundColor = "#f3f4f6";
 }
 
 
+greetButton.addEventListener("click", displayGreeting);
 
-greetButton.addEventListener(
-    "click",
-    displayGreeting
-);
+colorButton.addEventListener("click", changeBackground);
 
-colorButton.addEventListener(
-    "click",
-    changeBackground
-);
+resetButton.addEventListener("click", resetPage);
 
-resetButton.addEventListener(
-    "click",
-    resetPage
-);
-
-nameInput.addEventListener(
-    "input",
-    showTypedText
-);
+nameInput.addEventListener("input", showTypedText);
 
 
 console.log("JavaScript file loaded successfully.");
