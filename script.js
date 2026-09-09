@@ -1,4 +1,3 @@
-// Get HTML elements
 const heading = document.querySelector("#mainHeading");
 const nameInput = document.querySelector("#nameInput");
 const typingMessage = document.querySelector("#typingMessage");
@@ -9,7 +8,6 @@ const colorButton = document.querySelector("#colorButton");
 const resetButton = document.querySelector("#resetButton");
 
 
-// Display personalized greeting
 function displayGreeting() {
 
     const userName = nameInput.value.trim();
@@ -34,7 +32,6 @@ function displayGreeting() {
 }
 
 
-// Show text while the user is typing
 function showTypedText() {
 
     typingMessage.textContent =
@@ -44,7 +41,6 @@ function showTypedText() {
 }
 
 
-// Change background color
 function changeBackground() {
 
     document.body.style.backgroundColor = "lightblue";
@@ -53,7 +49,6 @@ function changeBackground() {
 }
 
 
-// Reset the webpage
 function resetPage() {
 
     heading.textContent =
@@ -74,7 +69,6 @@ function resetPage() {
 }
 
 
-// Event listeners
 
 greetButton.addEventListener(
     "click",
@@ -97,5 +91,4 @@ nameInput.addEventListener(
 );
 
 
-// Debugging message
 console.log("JavaScript file loaded successfully.");
